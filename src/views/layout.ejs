@@ -4,28 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description"
+      content="Watch live streams and gaming content on Twitch. Join millions of viewers and gamers around the world." />
+    <meta property="og:title" content="Watch Live Streams on Twitch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+      content="Join millions of viewers on Twitch for live streaming, gaming, and more." />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@elrefai99" />
+    <meta name="twitter:title" content="Watch Live Streams on Twitch" />
+    <meta name="twitter:description"
+      content="Join millions of viewers on Twitch for live streaming, gaming, and more." />
+    <meta name="twitter:image" content="http://example.com/image.jpg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <!--Tailwind Css-->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
     <script
       src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-        }
-    </style>
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
     <script src="tailwindcss.js"></script>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet">
+      rel="stylesheet" />
 
+    <!-- Unicons -->
     <link rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-    <link rel="stylesheet" href="style.css">
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Video.js -->
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Custom JavaScript -->
     <style>
     body { font-family: Arial, sans-serif; }
     #chat { margin-top: 20px; }
@@ -37,13 +64,16 @@
   </head>
   <body>
     <div>
+      <!-- Your main content here -->
       <%- body %>
     </div>
-    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Your additional JavaScript for functionality -->
     <script>
+    // Example Video.js usage
     var player = videojs('videoPlayer');
     
+    // Example Socket.IO usage
     var socket = io();
 
     var form = document.getElementById('form');

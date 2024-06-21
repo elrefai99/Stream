@@ -7,7 +7,7 @@ import requestIp from "request-ip";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import path from "path";
-// import expressLayouts from 'express-ejs-layouts'
+import expressLayouts from 'express-ejs-layouts'
 import flash from 'connect-flash'
 
 // Create the rate limit rule
@@ -56,7 +56,7 @@ export default (app: Application) => {
   });
   app.use(limiter);
 
-  // app.use(expressLayouts);
+  app.use(expressLayouts);
   app.set('view engine', 'ejs');
   app.set('views', path.join(__dirname, '../views'));
   app.use(express.static(path.join(__dirname, '../views/Shared')));
